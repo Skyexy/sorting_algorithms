@@ -26,25 +26,25 @@ void swap(int arr[], int x, int y)
  */
 void selection_sort(int *array, size_t size)
 {
-    size_t n;
-    size_t i;
-    size_t m;
+	size_t n;
+	size_t i;
+	size_t m;
 
-    for (i = 0; i < size; i++)
-    {
-        n = i;
-        for (m = i + 1; m < size; m++)
-        {
-            if (array[n] > array[m])
-            {
-                n = m;
-            }
-        }
-
-        if (n != i)
-        {
-            swap(array, i, n);
-            print_array(array, size);
-        }
-    }
+	for (i = 0; i < size; i++)
+	{
+		n = i;
+		for (m = i + 1; m < size; m++)
+		{
+			if (array[n] > array[m])
+			{
+				n = m;
+			}
+		}
+		
+		if (n != i)
+		{
+			swap(array, i, n);
+			print_array(array, size);
+		}
+	}
 }
