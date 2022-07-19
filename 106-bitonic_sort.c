@@ -39,7 +39,7 @@ void merge_element(int *arr, int low, int high, int order, size_t size)
 void bitonicsort(int *arr, int low, int high, int order, size_t size)
 {
     int position;
-
+	
 	if (high > 1)
 	{
 		position = high / 2;
@@ -51,5 +51,5 @@ void bitonicsort(int *arr, int low, int high, int order, size_t size)
 }
 void bitonic_sort(int *array, size_t size)
 {
-    bitonicsort(array, 0, size, 1, size);
+	bitonicsort(array, 0, size, 1, size);
 }
