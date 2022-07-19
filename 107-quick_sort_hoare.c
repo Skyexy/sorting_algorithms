@@ -10,9 +10,9 @@
  */
 void swap(int* a, int* b) 
 { 
-    int t = *a; 
-    *a = *b; 
-    *b = t; 
+	int t = *a; 
+	*a = *b; 
+	*b = t; 
 }
 
 /**
@@ -26,23 +26,23 @@ void swap(int* a, int* b)
  */
 int partition(int *arr, int low, int high, size_t size)
 { 
-    int pivot = arr[high];
-    int i = low;
-    int j = high;
+	int pivot = arr[high];
+	int i = low;
+	int j = high;
 
-    while (1)
-    {
-        while (arr[i] < pivot)
-            i++;
-        while (arr[j] > pivot)
-            j--;
-        if (i >= j)
-            return j;
-        swap(&arr[i], &arr[j]);
-        print_array(arr, size);
-        i++;
-        j--;
-    }
+	while (1)
+	{
+		while (arr[i] < pivot)
+			i++;
+		while (arr[j] > pivot)
+			j--;
+		if (i >= j)
+			return j;
+		swap(&arr[i], &arr[j]);
+		print_array(arr, size);
+		i++;
+		j--;
+	}
 }
 
 /**
@@ -56,15 +56,15 @@ int partition(int *arr, int low, int high, size_t size)
  */
 void quickSort(int *arr, int low, int high, size_t size)
 { 
-    if (low < high) 
-    {
-        int pi = partition(arr, low, high, size);
+	if (low < high) 
+	{
+		int pi = partition(arr, low, high, size);
 
-        quickSort(arr, low, pi - 1, size); 
-        quickSort(arr, pi, high, size);
-    } 
+		quickSort(arr, low, pi - 1, size); 
+		quickSort(arr, pi, high, size);
+	} 
 }
 void quick_sort_hoare(int *array, size_t size)
 {
-    quickSort(array, 0, size - 1, size);
+	quickSort(array, 0, size - 1, size);
 }
